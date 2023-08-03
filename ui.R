@@ -8,7 +8,7 @@ packageVersion('plotly')
 options(shiny.sanitize.errors = TRUE)
 
 ui <- fluidPage(
-  titlePanel(HTML("NIWA Wellington table tennis <s>ranking</s> contact tracing system")),    
+  titlePanel(HTML("NIWA Wellington table tennis ranking system")),    
   
   tabsetPanel(
     type = "tabs",
@@ -116,6 +116,13 @@ ui <- fluidPage(
     ),
     tabPanel(
       "About" ,
+      h4("Kia ora - How to start?"),
+      "Register your name in the 'Player Details' tab, clicking on the 'Add new player' button.",
+      "Your next job is to head to the tennis table and start playing!",
+      "Record your single or double score using the respective tabs 'Record Single/Doubles match'.",
+      "Watch careers unfold using the ranking tracker plot in the 'Singles/Doubles ranking' tab (make sure to select the players you are following in the right side of the figure).",
+      "Defy the odds by proving the game predictor wrong ('Record Single/Doubles match' tabs).",
+      "Ka pai!",
       h4("The ELO scoring system"),
       "Player ratings are calculated using the ",
       tags$a(href="https://en.wikipedia.org/wiki/Elo_rating_system", "Elo rating system"),
@@ -146,7 +153,10 @@ ui <- fluidPage(
       "The purpose of this threshold is twofold, firstly it ensures the rating",
       "of new players gets a chance to adjust prior to them recieving a ",
       "ranking, and secondly it ensures that rankings cannot be maintained ",
-      "without regular play (i.e. if you are no.1 you can't just retire!)"
+      "without regular play (i.e. if you are no.1 you can't just retire!)",
+      "About" ,
+      h4("Thanks"),
+      "This app has originally been created by Richard Measures (NIWA Chch), and used at NIWA Christchurch. Given the long history of table tennis at Greta Point, it was only a matter of time to have our own app. Big thanks to Neill Barr, Francois Thoral, Roberto Osegueda, Richard Measures, and others for your help to make this happening."
     )
   )
 )
